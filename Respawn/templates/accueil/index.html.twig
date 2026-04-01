@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {# Exemple d'un post type #}
+    <div class="bg-white border border-gray-300 rounded hover:border-gray-400 cursor-pointer flex">
+        {# Barre de vote #}
+        <div class="bg-[#F8F9FA] w-10 flex flex-col items-center py-2 space-y-1">
+            <i class="fas fa-arrow-up text-gray-400 hover:text-orange-600"></i>
+            <span class="text-xs font-bold">4.2k</span>
+            <i class="fas fa-arrow-down text-gray-400 hover:text-blue-600"></i>
+        </div>
+
+        {# Contenu #}
+        <div class="p-3 w-full">
+            <div class="flex items-center text-xs space-x-2 mb-2">
+                <span class="font-bold">r/FinalFantasy</span>
+                <span class="text-gray-500">• Posté par u/CloudStrife</span>
+                <span class="text-gray-500">il y a 5h</span>
+            </div>
+            <h2 class="text-lg font-medium mb-2">Le nouveau trailer du DLC est enfin là !</h2>
+            <div class="bg-gray-100 rounded-md flex justify-center">
+                 {# Placeholder pour l'image du jeu #}
+                <img src="https://placehold.co/600x300/1a1a1b/white?text=Screenshot+du+Jeu" alt="Game image" class="rounded">
+            </div>
+            
+            <div class="flex mt-3 space-x-4 text-gray-500 text-xs font-bold uppercase">
+                <div class="hover:bg-gray-100 p-1 rounded"><i class="fas fa-comment mr-1"></i> 152 Commentaires</div>
+                <div class="hover:bg-gray-100 p-1 rounded"><i class="fas fa-share mr-1"></i> Partager</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
