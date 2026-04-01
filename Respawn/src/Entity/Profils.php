@@ -6,7 +6,10 @@ use App\Repository\ProfilsRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
+#[UniqueEntity(fields: ['mail'],     message: 'Cette adresse email est déjà utilisée.')]
+#[UniqueEntity(fields: ['username'], message: 'Ce nom d\'utilisateur est déjà pris.')]
 #[ORM\Entity(repositoryClass: ProfilsRepository::class)]
 #[ORM\Table(name: 'Profils')]
 class Profils implements UserInterface, PasswordAuthenticatedUserInterface
